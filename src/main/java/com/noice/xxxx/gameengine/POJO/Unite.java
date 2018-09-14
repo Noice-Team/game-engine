@@ -1,7 +1,8 @@
-package POJO;
+package com.noice.xxxx.gameengine.POJO;
+
 import java.util.List;
 /**
- * represente une unité
+ * represente une unitï¿½
  * @author alban
  *
  */

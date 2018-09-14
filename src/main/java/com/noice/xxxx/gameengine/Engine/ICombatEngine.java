@@ -1,8 +1,8 @@
-package Engine;
+package com.noice.xxxx.gameengine.Engine;
 
 import java.util.List;
 
-import POJO.Unite;
+import com.noice.xxxx.gameengine.POJO.Unite;
 
 public interface ICombatEngine {
 	
@@ -12,5 +12,5 @@ public interface ICombatEngine {
 	 * @param belligerents
 	 * @return
 	 */
-	public Unite ResolveCombat(List<Unite>belligerents) ;
+	public Unite resolveCombat(List<Unite>belligerents) ;
 }

@@ -1,18 +1,23 @@
-package Engine;
+package com.noice.xxxx.gameengine.Engine.standard;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-import POJO.Case;
-import POJO.Game;
-import POJO.Unite;
+import org.springframework.stereotype.Service;
 
+import com.noice.xxxx.gameengine.Engine.IPathEngine;
+import com.noice.xxxx.gameengine.POJO.Case;
+import com.noice.xxxx.gameengine.POJO.Game;
+import com.noice.xxxx.gameengine.POJO.Unite;
+
+@Service
 public class PathEngine implements IPathEngine{
 	
 	
-	public Game ProcessRound(Game game) {
+	public Game processRound(Game game) {
 		boolean allMoveAreDone = false;
 
 		while (!allMoveAreDone) {
@@ -20,7 +25,7 @@ public class PathEngine implements IPathEngine{
 			// PHASE DE MOUVEMENT
 			allMoveAreDone=true;
 			HashMap<Case,List<Unite>> agregateurDeConflit = new HashMap<Case,List<Unite>>();
-			for (Unite unite : game.getListeUnites()) {
+			for (Unite unite : game.getUnites()) {
 				Case emplacementVirtuel = unite.getEmplacement();
 				if (unite.getChemin() != null && unite.getChemin().size() > 0) {
 					if (unite.canWalkIn(unite.getChemin().get(0))) {
@@ -51,7 +56,7 @@ public class PathEngine implements IPathEngine{
 				List<Unite> listeUniteSurLaMemeCase = agregateurDeConflit.get(cle);
 				if(listeUniteSurLaMemeCase!=null && listeUniteSurLaMemeCase.size()>0) {
 					// conflit !!
-					// check si appartiennent pas aux même joueur, sinon combat !
+					// check si appartiennent pas aux mï¿½me joueur, sinon combat !
 				}
 			}
 			
