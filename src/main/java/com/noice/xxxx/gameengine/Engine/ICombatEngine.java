@@ -2,6 +2,7 @@ package com.noice.xxxx.gameengine.Engine;
 
 import java.util.List;
 
+import com.noice.xxxx.gameengine.POJO.Case;
 import com.noice.xxxx.gameengine.POJO.Unite;
 
 public interface ICombatEngine {
@@ -12,5 +13,5 @@ public interface ICombatEngine {
 	 * @param belligerents
 	 * @return
 	 */
-	public Unite resolveCombat(List<Unite>belligerents) ;
+	public Unite resolveCombat(List<Unite>belligerents, Case champsDeBataille) ;
 }
