@@ -1,0 +1,29 @@
+language: java
+
+jdk:
+
+  - oraclejdk8
+
+branches:
+
+  only:
+
+    - master
+
+install:
+
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+
+script:
+
+  - mvn test
+
+  
+
+#deploy:
+
+#  provider: gae
+
+#  keyfile: "YOUR SERVICE ACCOUNT JSON FILE"
+
+#  project: "xxxx-server"
