@@ -1,13 +1,8 @@
 package com.noice.xxxx.gameengine;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.junit.jupiter.api.Test;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
-public class GameEngineApplicationTests {
+public class GameEngineApplicationTests extends XTest{
 
 	@Test
 	public void contextLoads() {
