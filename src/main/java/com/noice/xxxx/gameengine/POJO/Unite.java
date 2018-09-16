@@ -18,6 +18,7 @@ public class Unite {
 	private int armure;
 	private int degatsMin;
 	private int degatsMax;
+	private int portee;
 	
 	public Joueur getJoueur() {
 		return joueur;
@@ -80,6 +81,12 @@ public class Unite {
 		this.degatsMax = degatsMax;
 	}
 
+	public int getPortee() {
+		return portee;
+	}
+	public void setPortee(int portee) {
+		this.portee = portee;
+	}
 	public boolean canWalkIn(Case case1) {
 		// TODO Auto-generated method stub
 		return true;
