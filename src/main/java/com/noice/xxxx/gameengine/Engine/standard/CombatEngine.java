@@ -8,14 +8,18 @@ import java.util.Random;
 import org.springframework.stereotype.Service;
 
 import com.noice.xxxx.gameengine.Engine.ICombatEngine;
+<<<<<<< HEAD
 import com.noice.xxxx.gameengine.POJO.Joueur;
+=======
+import com.noice.xxxx.gameengine.POJO.Case;
+>>>>>>> refs/heads/master
 import com.noice.xxxx.gameengine.POJO.Unite;
 
 @Service
 public class CombatEngine implements ICombatEngine{
 
 	@Override
-	public Unite resolveCombat(List<Unite> belligerents) {
+	public Unite resolveCombat(List<Unite> belligerents, Case champsDeBataille) {
 		// TODO Auto-generated method stub
 		/*	 * retourne l'unite victorieuse, si il y en a une.
 	 * sinon retourne null
