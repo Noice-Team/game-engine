@@ -8,7 +8,10 @@ import com.noice.xxxx.gameengine.Engine.IGameEngine;
 import com.noice.xxxx.gameengine.Engine.IPathEngine;
 import com.noice.xxxx.gameengine.POJO.Game;
 
+import lombok.Data;
+
 @Service
+@Data
 public class GameEngine  implements IGameEngine{
 	@Autowired
 	private ICombatEngine combatEngine;
@@ -16,7 +19,18 @@ public class GameEngine  implements IGameEngine{
 	private IPathEngine pathEngine;
 	
 	public void resolveTurn(Game game) {
-		pathEngine.processRound(game);
+		while (!pathEngine.makeOneStep(game))
+		{
+			// TODO entre chaque mouvement
+			// Tir
+			// update des case exploré et des case sans fog.
+			// autre
+		}
+	}
+
+	@Override
+	public ICombatEngine getICombatEngine() {
+		return combatEngine;
 	}
 	
 }
